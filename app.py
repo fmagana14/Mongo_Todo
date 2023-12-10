@@ -24,7 +24,6 @@ def index():
 
     print(all_todos_object)
 
-    all_todos = todos.find()
 
     # give all the todos to the 'index.html' template
     return render_template('index.html', todos=all_todos_object)
@@ -32,7 +31,10 @@ def index():
 coustom_priority_order ={'Very Important': 1,
                          'Important': 2, 'Normal': 3, 'Uniportant': 4}
 
-
+@app.post('/<id>/delete/')
+def delete(id):
+    todos.delete_one({"_id": ObjectId(id)})
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True, port=5002)
