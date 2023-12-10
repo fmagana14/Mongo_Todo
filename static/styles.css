@@ -28,3 +28,9 @@ input[type=text] {
 .Important {
 	color: purple;
 }
+.Normal{
+	color: green;
+}
+.Unimportant{
+	color: red;
+}

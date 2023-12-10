@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path = "/static")
 # from pymongo import MongoClient
 # The Following code ia my own 
 uri = "mongodb+srv://FMuser:KoolWordz@cluster0.ykezvyd.mongodb.net/?retryWrites=true&w=majority"
@@ -38,5 +38,3 @@ def delete(id):
 
 if __name__ == '__main__':
     app.run(debug=True, port=5002)
-
-# KoolWordz

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FlaskApp</title>
+	<link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>FlaskTODO</h1>
@@ -42,11 +43,6 @@
 
    <!--Todo list  -->
    <hr>
-{% for todo in todos %}
-		<div class="todo">
-				<p class="{{ todo.priority }}">{{ todo.content }} <em>({{ todo.priority }})</em></p>
-		</div>
-{% endfor %}
 
 {% for todo in todos %}
 	<div class="todo">
