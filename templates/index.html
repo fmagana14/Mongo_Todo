@@ -31,9 +31,13 @@
 			<p><button type="submit">Submit</button></p>
 		</form>
 
-    <div class="todos">
-      <p class=""> </p>  
-    </div>
+   <!--Todo list  -->
+   <hr>
+{% for todo in todos %}
+		<div class="todo">
+				<p class="{{ todo.priority }}">{{ todo.content }} <em>({{ todo.priority }})</em></p>
+		</div>
+{% endfor %}
 	</div>
 </body>
 </html>

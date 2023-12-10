@@ -24,6 +24,8 @@ def index():
 
     print(all_todos_object)
 
+    all_todos = todos.find()
+
     # give all the todos to the 'index.html' template
     return render_template('index.html', todos=all_todos_object)
 
@@ -33,6 +35,6 @@ coustom_priority_order ={'Very Important': 1,
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5002)
 
 # KoolWordz
